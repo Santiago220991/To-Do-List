@@ -9,27 +9,7 @@ const entercontainer = document.querySelector('.text-input img');
 const taskcontainer = document.querySelector('.tasks');
 
 const taskarr = [
-  {
-    description: 'Fourt Task',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Second Task',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Third Task',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'First Task',
-    completed: false,
-    index: 0,
-  },
-
+  
 ];
 
 refrescontainer.src = refreshicon;
