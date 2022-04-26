@@ -11,22 +11,22 @@ const taskcontainer = document.querySelector('.tasks');
 const taskarr = [
   {
     description: 'Fourt Task',
-    completed: 0,
+    completed: False,
     index: 3,
   },
   {
     description: 'Second Task',
-    completed: 0,
+    completed: False,
     index: 1,
   },
   {
     description: 'Third Task',
-    completed: 0,
+    completed: False,
     index: 2,
   },
   {
     description: 'First Task',
-    completed: 0,
+    completed: False,
     index: 0,
   },
 
