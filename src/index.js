@@ -1,7 +1,10 @@
 import './styles.css';
+import checkboxicon from "./empty_checkbox_img.png"
+import editincon from "./edit_icon_img.png"
+import refreshicon from "./refresh_icon_img.png"
 
+const refrescontainer=document.querySelector(".title img")
 const taskcontainer=document.querySelector(".tasks")
-
 
 let taskarr=[
     {
@@ -16,4 +19,14 @@ let taskarr=[
     }
 ]
 
-taskarr.forEach(element=>{taskcontainer.innerHTML+=`<div id="${element.index}"><img src="./empty_checkbox_img" alt="checkbox icon">${element.description}</div>`})
+refrescontainer.src=refreshicon
+
+let storagedtasks=()=>{
+taskarr.forEach(element=>{taskcontainer.innerHTML+=`<div class="tasks-item" id="${element.index}">
+<div class="tasks-item-start"><img class="checkboxicon" src="${checkboxicon}" alt="checkbox icon">
+<p>${element.description}</p>
+</div>
+<img class="editicon" src="${editincon}" alt="edit icon">
+</div>`})
+}
+storagedtasks()

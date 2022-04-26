@@ -19,6 +19,17 @@ body{
   padding-top:12px;
   padding-bottom: 12px;
 }
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title img{
+  width: 14px;
+  height: 14px;
+}
 .text-input input{
   border: none;
   font-style: italic;
@@ -36,10 +47,33 @@ body{
 .tasks > *{
   border-bottom: 1px solid black;
   padding-left: 24px;
-  padding-left: 24px;
+  padding-right: 24px;
   padding-top:12px;
   padding-bottom: 12px;
   font-size: 18px;
+}
+
+.tasks-item{
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasks-item-start{
+  display:flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.checkboxicon{
+  height: 14px;
+  width: 14px;
+}
+
+.editicon{
+  height: 14px;
+  width: 14px;
 }
 
 .button{
