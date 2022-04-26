@@ -62,3 +62,7 @@ Feel free to check the [issues page](https://github.com/Santiago220991/To-Do-Lis
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
