@@ -82,6 +82,13 @@ body {
   column-gap: 10px;
 }
 
+.edit_text{
+  display:none;
+}
+
+.removeicon{
+  display:none;
+}
 .checkboxicon {
   height: 14px;
   width: 14px;
