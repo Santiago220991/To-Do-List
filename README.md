@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Portfolio Live Demo Link ](https://santiago220991.github.io/To-Do-List/)
+[To do List Live Demo Link ](https://santiago220991.github.io/To-Do-List/)
 
 ## Getting Started
 
