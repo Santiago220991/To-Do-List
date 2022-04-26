@@ -1,53 +1,58 @@
-body{
+body {
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.to-do-container{
-  width: 80%;
+.to-do-container {
+  width: 60%;
   border-radius: 2px;
   border: solid black 2px;
   font-size: 32px;
   box-shadow: 5px 5px 5px 5px rgb(207, 205, 205);
+  margin-top: 6%;
 }
 
-.to-do-container > *{
+.to-do-container > * {
   border-bottom: solid 1px black;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top:12px;
+  padding-top: 12px;
   padding-bottom: 12px;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.title img{
+.title img {
   width: 14px;
   height: 14px;
 }
 
-.text-input{
+.text-input {
   display: flex;
   justify-content: space-between;
 }
 
-.text-input input{
+.text-input input {
   border: none;
   font-style: italic;
   font-size: 18px;
 }
 
-.text-input img{
+.text-input input:focus {
+  outline: none;
+}
+
+.text-input img {
   width: 14px;
   height: 14px;
 }
-.tasks{
+
+.tasks {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -55,39 +60,39 @@ body{
   border-bottom: 0;
 }
 
-.tasks > *{
+.tasks > * {
   border-bottom: 1px solid black;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top:12px;
+  padding-top: 12px;
   padding-bottom: 12px;
   font-size: 18px;
 }
 
-.tasks-item{
+.tasks-item {
   display: flex;
   column-gap: 10px;
   align-items: center;
   justify-content: space-between;
 }
 
-.tasks-item-start{
-  display:flex;
+.tasks-item-start {
+  display: flex;
   align-items: center;
   column-gap: 10px;
 }
 
-.checkboxicon{
+.checkboxicon {
   height: 14px;
   width: 14px;
 }
 
-.editicon{
+.editicon {
   height: 14px;
   width: 14px;
 }
 
-.button{
+.button {
   display: flex;
   justify-content: center;
   font-size: 24px;

@@ -11,20 +11,39 @@ const taskcontainer=document.querySelector(".tasks")
 
 let taskarr=[
     {
-    description: "Wash dishes",
+    description: "Fourt Task",
     completed: 0,
-    index: 0,
+    index: 3,
     },
     {
-    description: "Complete To Do list Project",
+    description: "Second Task",
     completed: 0,
     index: 1,
+    },
+    {
+    description: "Third Task",
+    completed: 0,
+    index: 2,
+    },
+    {
+    description: "First Task",
+    completed: 0,
+    index: 0,
     }
+
 ]
+
+
+
 
 refrescontainer.src=refreshicon
 entercontainer.src=entericon
+
+
 let storagedtasks=()=>{
+taskarr.sort((a,b)=>{
+    return a.index-b.index
+})
 taskarr.forEach(element=>{taskcontainer.innerHTML+=`<div class="tasks-item" id="${element.index}">
 <div class="tasks-item-start"><img class="checkboxicon" src="${checkboxicon}" alt="checkbox icon">
 <p>${element.description}</p>
