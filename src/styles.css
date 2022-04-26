@@ -100,6 +100,8 @@ body {
 
 .removeicon{
   display:none;
+  width: 14px;
+  height: 14px;
 }
 
 .removeicon.active{
@@ -109,11 +111,18 @@ body {
 .checkboxicon {
   height: 14px;
   width: 14px;
+  cursor: pointer;
 }
 
 .edit_icon {
   height: 14px;
   width: 14px;
+  display: block;
+  cursor: pointer;
+}
+
+.edit_icon.active {
+  display: none;
 }
 
 .button {
