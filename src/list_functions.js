@@ -1,4 +1,4 @@
-const add=(inputtext,taskarr)=>{
+export const add=(inputtext,taskarr)=>{
     let len=taskarr.length
     taskarr.push({
         description: inputtext,
@@ -8,6 +8,7 @@ const add=(inputtext,taskarr)=>{
     
 }
 
+export const edit=(editinput,taskarr,id)=>{
+    taskarr[id].description=editinput
+}
 
-
-export {add}
