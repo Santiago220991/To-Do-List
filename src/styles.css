@@ -10,6 +10,7 @@ body{
   border-radius: 2px;
   border: solid black 2px;
   font-size: 32px;
+  box-shadow: 5px 5px 5px 5px rgb(207, 205, 205);
 }
 
 .to-do-container > *{
@@ -30,12 +31,22 @@ body{
   width: 14px;
   height: 14px;
 }
+
+.text-input{
+  display: flex;
+  justify-content: space-between;
+}
+
 .text-input input{
   border: none;
   font-style: italic;
   font-size: 18px;
 }
 
+.text-input img{
+  width: 14px;
+  height: 14px;
+}
 .tasks{
   padding-left: 0;
   padding-right: 0;
