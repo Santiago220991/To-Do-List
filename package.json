@@ -1,5 +1,5 @@
 {
-  "name": "aweasome-books",
+  "name": "to-do-list",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andgarzonmal/Aweasome-books-.git"
+    "url": "git+https://github.com/Santiago220991/To-Do-List.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andgarzonmal/Aweasome-books-/issues"
+    "url": "https://github.com/Santiago220991/To-Do-List/issues"
   },
-  "homepage": "https://github.com/andgarzonmal/Aweasome-books-#readme",
+  "homepage": "https://github.com/Santiago220991/To-Do-List#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
