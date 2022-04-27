@@ -122,8 +122,11 @@ clearcompleted.addEventListener("click",()=>{
       element.parentElement.parentElement.remove();
     }
   })
-  fun.clear(taskarr)
+  taskarr=fun.clear(taskarr)
+  console.log(taskarr)
   localStorage.setItem('session', JSON.stringify(taskarr));
+  const tasks = document.querySelectorAll('.tasks-item');
+      tasks.forEach((element, index) => { element.id = taskarr[index].index; });
 })
 
 refrescontainer.src = refreshicon;
