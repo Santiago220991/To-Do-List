@@ -4,13 +4,15 @@ import refreshicon from './refresh_icon_img.png';
 import entericon from './enter_icon_img.png';
 import * as fun from './list_functions.js';
 import deleteicon from './erase_icon_img.png';
+import Check from "./check.js"
+
 
 const refrescontainer = document.querySelector('.title img');
 const entercontainer = document.querySelector('.text-input img');
 const taskcontainer = document.querySelector('.tasks');
 const inputtext = document.querySelector('.text-input input');
 const sessionsaved = JSON.parse(localStorage.getItem('session'));
-
+const checkclass=new Check
 let taskarr = [];
 
 const activebuttons = () => {
@@ -18,6 +20,7 @@ const activebuttons = () => {
   const editbutton = document.querySelectorAll('.edit_icon');
   const removeicon = document.querySelectorAll('.removeicon');
   const editinput = document.querySelectorAll('.edit_text');
+  const completed= document.querySelectorAll(".checkboxicon");
   editbutton.forEach((element, index) => {
     element.addEventListener('click', () => {
       removeicon[index].classList.add('active');
@@ -46,6 +49,13 @@ const activebuttons = () => {
       tasks.forEach((element, index) => { element.id = taskarr[index].index; });
     });
   });
+completed.forEach((element,index)=>{
+  element.addEventListener("change", () =>{
+    
+  }
+  )
+})
+
 };
 
 const storagedtasks = () => {
