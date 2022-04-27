@@ -51,7 +51,14 @@ const activebuttons = () => {
   });
 completed.forEach((element,index)=>{
   element.addEventListener("change", () =>{
-    
+    console.log(element.checked)
+    if(element.checked===true){
+      checkclass.checked(taskarr,completed[index].parentElement.parentElement.id)
+      localStorage.setItem('session', JSON.stringify(taskarr));
+    }else{
+      checkclass.uncheked(taskarr,completed[index].parentElement.parentElement.id)
+      localStorage.setItem('session', JSON.stringify(taskarr));
+    }
   }
   )
 })
@@ -60,6 +67,8 @@ completed.forEach((element,index)=>{
 
 const storagedtasks = () => {
   taskarr.forEach((element) => {
+
+if (element.completed==false){
     taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}">
 <div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
 <p>${element.description}</p>
@@ -68,6 +77,17 @@ const storagedtasks = () => {
 <img class="edit_icon" src="${editincon}" alt="edit icon">
 <img class="removeicon" src="${deleteicon}" alt="remove icon">
 </div>`;
+}
+else{
+  taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}">
+  <div class="tasks-item-start"><input type="checkbox" class="checkboxicon" checked>
+  <p>${element.description}</p>
+  <input class="edit_text" type="text" placeholder="Edit Task">
+  </div>
+  <img class="edit_icon" src="${editincon}" alt="edit icon">
+  <img class="removeicon" src="${deleteicon}" alt="remove icon">
+  </div>`;
+}
   });
 };
 
