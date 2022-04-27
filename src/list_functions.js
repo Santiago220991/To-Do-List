@@ -16,4 +16,5 @@ export const erase = (taskarr, id) => {
   taskarr.forEach((element, index) => {
     element.index = index + 1;
   });
+
 };

@@ -5,6 +5,7 @@ import entericon from './enter_icon_img.png';
 import * as fun from './list_functions.js';
 import deleteicon from './erase_icon_img.png';
 import Check from "./check.js"
+import { remove } from 'lodash';
 
 
 const refrescontainer = document.querySelector('.title img');
@@ -115,7 +116,14 @@ inputtext.addEventListener('keypress', (event) => {
 });
 
 clearcompleted.addEventListener("click",()=>{
-  console.log("gola")
+  const taskschekbox=document.querySelectorAll(".checkboxicon")
+  taskschekbox.forEach((element)=>{
+    if(element.checked===true){
+      element.parentElement.parentElement.remove();
+    }
+  })
+  fun.clear(taskarr)
+  localStorage.setItem('session', JSON.stringify(taskarr));
 })
 
 refrescontainer.src = refreshicon;
