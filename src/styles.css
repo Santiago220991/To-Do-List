@@ -82,31 +82,31 @@ body {
   column-gap: 10px;
 }
 
-.tasks-item-start p{
+.tasks-item-start p {
   display: block;
 }
 
-.tasks-item-start p.active{
-  display:none;
+.tasks-item-start p.active {
+  display: none;
 }
 
-.edit_text{
-  display:none;
+.edit_text {
+  display: none;
 }
 
-.edit_text.active{
-  display:block;
+.edit_text.active {
+  display: block;
 }
 
-.removeicon{
-  display:none;
+.removeicon {
+  display: none;
   width: 14px;
   height: 14px;
   cursor: pointer;
 }
 
-.removeicon.active{
-  display:block;
+.removeicon.active {
+  display: block;
 }
 
 .checkboxicon {
