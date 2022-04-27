@@ -82,14 +82,48 @@ body {
   column-gap: 10px;
 }
 
+.tasks-item-start p {
+  display: block;
+}
+
+.tasks-item-start p.active {
+  display: none;
+}
+
+.edit_text {
+  display: none;
+}
+
+.edit_text.active {
+  display: block;
+}
+
+.removeicon {
+  display: none;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.removeicon.active {
+  display: block;
+}
+
 .checkboxicon {
   height: 14px;
   width: 14px;
+  cursor: pointer;
 }
 
-.editicon {
+.edit_icon {
   height: 14px;
   width: 14px;
+  display: block;
+  cursor: pointer;
+}
+
+.edit_icon.active {
+  display: none;
 }
 
 .button {
