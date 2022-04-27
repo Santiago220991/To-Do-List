@@ -11,6 +11,7 @@ const refrescontainer = document.querySelector('.title img');
 const entercontainer = document.querySelector('.text-input img');
 const taskcontainer = document.querySelector('.tasks');
 const inputtext = document.querySelector('.text-input input');
+const clearcompleted= document.querySelector('.clearbutton')
 const sessionsaved = JSON.parse(localStorage.getItem('session'));
 const checkclass=new Check
 let taskarr = [];
@@ -112,6 +113,10 @@ inputtext.addEventListener('keypress', (event) => {
     activebuttons();
   }
 });
+
+clearcompleted.addEventListener("click",()=>{
+  console.log("gola")
+})
 
 refrescontainer.src = refreshicon;
 entercontainer.src = entericon;
