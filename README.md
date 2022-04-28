@@ -36,6 +36,8 @@ To get a local copy up and running follow these simple example steps.
 ## Setup
 
 - Clone the repository.
+- In your code editor terminal run `npm install` to install all the dependencies needed.
+- In you code editor terminal run `npm run start` to start the local server.
 - Open the index.html file with a live server.
 - Open a browser an introduce the next URL http://127.0.0.1:5501/index.html
 
