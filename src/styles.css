@@ -94,6 +94,7 @@ body {
 
 .edit_text {
   display: none;
+  width: 80%;
 }
 
 .edit_text.active {
