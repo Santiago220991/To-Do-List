@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Clone the repository.
 - In your code editor terminal run `npm install` to install all the dependencies needed.
-- In you code editor terminal run `npm run start` to start the local server.
+- In your code editor terminal run `npm run start` to start the local server.
 
 
 ## Authors
