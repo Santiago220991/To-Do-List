@@ -95,7 +95,7 @@ if (sessionsaved !== null) {
 inputtext.addEventListener('keypress', (event) => {
   if (event.key === 'Enter' && inputtext.value !== '') {
     fun.add(inputtext.value, taskarr);
-    inputtext.value=""
+    inputtext.value = '';
     localStorage.setItem('session', JSON.stringify(taskarr));
     taskcontainer.innerHTML += `<div class="tasks-item" id="${taskarr[taskarr.length - 1].index}">
 <div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
