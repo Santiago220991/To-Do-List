@@ -1,10 +1,17 @@
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .to-do-container {
+  background-color: white;
   width: 60%;
   border-radius: 2px;
   border: solid black 1px;

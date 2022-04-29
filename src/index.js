@@ -5,7 +5,9 @@ import entericon from './enter_icon_img.png';
 import * as fun from './list_functions.js';
 import deleteicon from './erase_icon_img.png';
 import Check from './check.js';
+import backgroundimg from './background_img.png';
 
+const background = document.querySelector('body');
 const refrescontainer = document.querySelector('.title img');
 const entercontainer = document.querySelector('.text-input img');
 const taskcontainer = document.querySelector('.tasks');
@@ -13,6 +15,8 @@ const inputtext = document.querySelector('.text-input input');
 const clearcompleted = document.querySelector('.clearbutton');
 const sessionsaved = JSON.parse(localStorage.getItem('saved'));
 const checkclass = new Check();
+
+background.style.backgroundImage = `url('${backgroundimg}')`;
 let taskarr = [];
 
 const activebuttons = () => {
