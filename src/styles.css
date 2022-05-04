@@ -1,13 +1,13 @@
 html {
-  height: 100%;
+  height: auto;
 }
 
 body {
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 .to-do-container {
@@ -72,8 +72,6 @@ body {
   border-bottom: 1px solid black;
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   font-size: 18px;
 }
 
@@ -92,7 +90,6 @@ body {
 
 .tasks-item-start p {
   display: block;
-  font-size: 2vw;
 }
 
 .tasks-item-start p.active {
@@ -100,8 +97,11 @@ body {
 }
 
 .edit_text {
+  margin-top: 13px;
+  margin-bottom: 13px;
   display: none;
   width: 80%;
+  font-size: 18px;
 }
 
 .edit_text.active {
@@ -143,4 +143,10 @@ body {
   color: gray;
   cursor: pointer;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .tasks-item-start p {
+    font-size: 2vh;
+  }
 }
