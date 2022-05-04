@@ -6,6 +6,7 @@ import * as fun from './modules/list_functions.js';
 import deleteicon from './erase_icon_img.png';
 import Check from './modules/check.js';
 import backgroundimg from './background_img.png';
+import * as dom from "./modules/dom_functions.js";
 
 const background = document.querySelector('body');
 const refrescontainer = document.querySelector('.title img');
@@ -18,6 +19,8 @@ const checkclass = new Check();
 
 background.style.backgroundImage = `url('${backgroundimg}')`;
 let taskarr = [];
+
+
 
 const activebuttons = () => {
   const editcontainer = document.querySelectorAll('.tasks-item-start p');
@@ -34,9 +37,7 @@ const activebuttons = () => {
       editinput[index].addEventListener('keypress', (event) => {
         if (event.key === 'Enter' && editinput[index].value !== '') {
           fun.edit(editinput[index].value, taskarr, index);
-          localStorage.setItem('saved', JSON.stringify(taskarr));
-          editcontainer[index].textContent = taskarr[index].description;
-          editcontainer[index].classList.remove('active');
+          dom.domedit(editcontainer,index,taskarr)
           editinput[index].classList.remove('active');
           editbutton[index].classList.remove('active');
           removeicon[index].classList.remove('active');
@@ -47,10 +48,7 @@ const activebuttons = () => {
   removeicon.forEach((element, index) => {
     element.addEventListener('click', () => {
       fun.erase(taskarr, removeicon[index].parentElement.id);
-      localStorage.setItem('saved', JSON.stringify(taskarr));
-      removeicon[index].parentElement.remove();
-      const tasks = document.querySelectorAll('.tasks-item');
-      tasks.forEach((element, index) => { element.id = taskarr[index].index; });
+      dom.domremove(removeicon,index,taskarr)
     });
   });
   completed.forEach((element, index) => {
@@ -100,15 +98,7 @@ inputtext.addEventListener('keypress', (event) => {
   if (event.key === 'Enter' && inputtext.value !== '') {
     fun.add(inputtext.value, taskarr);
     inputtext.value = '';
-    localStorage.setItem('saved', JSON.stringify(taskarr));
-    taskcontainer.innerHTML += `<div class="tasks-item" id="${taskarr[taskarr.length - 1].index}">
-<div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
-<p>${taskarr[taskarr.length - 1].description}</p>
-<input class="edit_text" type="text" placeholder="Edit Task" value="${taskarr[taskarr.length - 1].description}">
-</div>
-<img class="edit_icon" src="${editincon}" alt="edit icon">
-<img class="removeicon" src="${deleteicon}" alt="remove icon">
-</div>`;
+    dom.domadd(taskarr,taskcontainer,editincon,deleteicon)
     activebuttons();
   }
 });
@@ -129,3 +119,4 @@ clearcompleted.addEventListener('click', () => {
 
 refrescontainer.src = refreshicon;
 entercontainer.src = entericon;
+
