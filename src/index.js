@@ -2,9 +2,9 @@ import './styles.css';
 import editincon from './edit_icon_img.png';
 import refreshicon from './refresh_icon_img.png';
 import entericon from './enter_icon_img.png';
-import * as fun from './list_functions.js';
+import * as fun from './modules/list_functions.js';
 import deleteicon from './erase_icon_img.png';
-import Check from './check.js';
+import Check from './modules/check.js';
 import backgroundimg from './background_img.png';
 
 const background = document.querySelector('body');
@@ -33,7 +33,6 @@ const activebuttons = () => {
       editinput[index].classList.add('active');
       editinput[index].addEventListener('keypress', (event) => {
         if (event.key === 'Enter' && editinput[index].value !== '') {
-          
           fun.edit(editinput[index].value, taskarr, index);
           localStorage.setItem('saved', JSON.stringify(taskarr));
           editcontainer[index].textContent = taskarr[index].description;
