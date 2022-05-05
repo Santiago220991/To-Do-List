@@ -325,6 +325,7 @@
     "isexe": "^2.0.0",
     "isstream": "^0.1.2",
     "jake": "^10.8.2",
+    "jest-environment-jsdom": "^28.0.2",
     "js-library-detector": "^6.4.0",
     "js-tokens": "^4.0.0",
     "js-yaml": "^3.14.1",

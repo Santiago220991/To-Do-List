@@ -37,6 +37,7 @@ const activebuttons = () => {
       editinput[index].addEventListener('keypress', (event) => {
         if (event.key === 'Enter' && editinput[index].value !== '') {
           fun.edit(editinput[index].value, taskarr, index);
+          localStorage.setItem('saved', JSON.stringify(taskarr));
           dom.domedit(editcontainer,index,taskarr)
           editinput[index].classList.remove('active');
           editbutton[index].classList.remove('active');
@@ -48,7 +49,10 @@ const activebuttons = () => {
   removeicon.forEach((element, index) => {
     element.addEventListener('click', () => {
       fun.erase(taskarr, removeicon[index].parentElement.id);
+      localStorage.setItem('saved', JSON.stringify(taskarr));
       dom.domremove(removeicon,index,taskarr)
+      const tasks = document.querySelectorAll('.tasks-item');
+      tasks.forEach((element, index) => { element.id = taskarr[index].index; });
     });
   });
   completed.forEach((element, index) => {
@@ -99,7 +103,9 @@ inputtext.addEventListener('keypress', (event) => {
     fun.add(inputtext.value, taskarr);
     inputtext.value = '';
     dom.domadd(taskarr,taskcontainer,editincon,deleteicon)
+    localStorage.setItem('saved', JSON.stringify(taskarr));
     activebuttons();
+
   }
 });
 
