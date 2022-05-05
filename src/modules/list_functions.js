@@ -5,6 +5,7 @@ export const add = (inputtext, taskarr) => {
     completed: false,
     index: len + 1,
   });
+  return taskarr;
 };
 
 export const edit = (editinput, taskarr, id) => {
@@ -16,6 +17,7 @@ export const erase = (taskarr, id) => {
   taskarr.forEach((element, index) => {
     element.index = index + 1;
   });
+  return taskarr;
 };
 export const clear = (taskarr) => {
   taskarr = taskarr.filter((element) => element.completed !== true);

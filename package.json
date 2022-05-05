@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Santiago220991/To-Do-List#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
@@ -26,6 +27,8 @@
     "eslint-plugin-import": "^2.26.0",
     "hint": "^6.1.11",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.0.3",
+    "localstorage-polyfill": "^1.0.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -322,6 +325,7 @@
     "isexe": "^2.0.0",
     "isstream": "^0.1.2",
     "jake": "^10.8.2",
+    "jest-environment-jsdom": "^28.0.2",
     "js-library-detector": "^6.4.0",
     "js-tokens": "^4.0.0",
     "js-yaml": "^3.14.1",
