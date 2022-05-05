@@ -17,3 +17,11 @@ export const domedit = (editcontainer, index, taskarr) => {
   editcontainer[index].textContent = taskarr[index].description;
   editcontainer[index].classList.remove('active');
 };
+
+export const domClear = (taskschekbox) => {
+  taskschekbox.forEach((element) => {
+    if (element.checked === true) {
+      element.parentElement.parentElement.remove();
+    }
+  });
+};

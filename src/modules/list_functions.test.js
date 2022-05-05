@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { add, erase, edit, clear } from './list_functions.js';
-import { domadd, domremove, domedit } from './dom_functions.js';
+import { domadd, domremove, domedit, domClear } from './dom_functions.js';
 import Check from './check.js'
 
 const myhtml = `<div class="to-do-container">
@@ -125,5 +125,35 @@ describe('Delete all completed', () => {
                          { description: 'task', index: 3, completed: true }];
         taskarr = clear(taskarr);
         expect(taskarr).toHaveLength(1)
-    })
+    });
+    test ('Delete all items marked complete from the DOM', () =>{
+      const tasksHtml =`<div class="tasks"><div class="tasks-item" id="1">
+      <div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
+      <p>task 1</p>
+      <input class="edit_text" type="text" placeholder="Edit Task" value="task 1">
+      </div>
+      <img class="edit_icon">
+      <img class="removeicon">
+      </div><div class="tasks-item" id="2">
+      <div class="tasks-item-start"><input type="checkbox" class="checkboxicon" checked>
+      <p>task 2</p>
+      <input class="edit_text" type="text" placeholder="Edit Task" value="task 4">
+      </div>
+      <img class="edit_icon">
+      <img class="removeicon">
+      </div>
+      <div class="tasks-item" id="2">
+      <div class="tasks-item-start"><input type="checkbox" class="checkboxicon" checked>
+      <p>task 3</p>
+      <input class="edit_text" type="text" placeholder="Edit Task" value="task 4">
+      </div>
+      <img class="edit_icon">
+      <img class="removeicon">
+      </div>
+      </div>`;
+      let taskschekbox = document.querySelectorAll('.checkboxicon');
+      domClear(taskschekbox);
+      taskschekbox = document.querySelectorAll('.checkboxicon');
+      expect(taskschekbox).toHaveLength(1);
+  })
 })
