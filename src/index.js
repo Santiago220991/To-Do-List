@@ -120,7 +120,7 @@ clearcompleted.addEventListener('click', () => {
   localStorage.setItem('saved', JSON.stringify(taskarr));
   const tasks = document.querySelectorAll('.tasks-item');
   tasks.forEach((element, index) => { element.id = taskarr[index].index; });
-  location.reload()
+  window.location.reload()
 });
 
 refrescontainer.src = refreshicon;

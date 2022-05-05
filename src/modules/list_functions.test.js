@@ -17,6 +17,12 @@ test("Add task to array",()=>{
     
 })
 
+test("Remove task from array",()=>{
+    let taskarr=[{description:"task", index:1, completed:false},{description:"task", index:1, completed:false}]
+    expect (((erase(taskarr,1))).length).toBe(1)
+})
+
+
 test("Add a new element to the DOM",()=>{
     let taskarr=[]
     document.body.innerHTML=myhtml
