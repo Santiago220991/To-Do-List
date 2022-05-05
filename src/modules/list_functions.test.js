@@ -10,6 +10,7 @@ const myhtml = `<div class="to-do-container">
 <div class="tasks"></div>
 <div class="clearbutton"><a>Clear all completed</a></div>`;
 
+describe('Add and Remove a task from the array', () => {
 test('Add task to array', () => {
   const taskarr = [];
   expect((add('element', taskarr)).length).toBe(1);
@@ -19,7 +20,9 @@ test('Remove task from array', () => {
   const taskarr = [{ description: 'task', index: 1, completed: false }, { description: 'task', index: 1, completed: false }];
   expect(((erase(taskarr, 1))).length).toBe(1);
 });
+})
 
+describe('Add and Remove a task from the DOM', () => {
 test('Add a new element to the DOM', () => {
   const taskarr = [];
   document.body.innerHTML = myhtml;
@@ -47,3 +50,4 @@ test('Remove an element from the DOM', () => {
   current = current.children.length;
   expect((current + 1) === (old)).toBe(true);
 });
+})
