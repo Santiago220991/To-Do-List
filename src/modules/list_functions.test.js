@@ -1,9 +1,13 @@
 /*
  * @jest-environment jsdom
  */
-import { add, erase, edit, clear } from './list_functions.js';
-import { domadd, domremove, domedit, domClear } from './dom_functions.js';
-import Check from './check.js'
+import {
+  add, erase, edit, clear,
+} from './list_functions.js';
+import {
+  domadd, domremove, domedit, domClear,
+} from './dom_functions.js';
+import Check from './check.js';
 
 const myhtml = `<div class="to-do-container">
 <div class="title">Today's To Do <img src="#" alt="refresh icon"></div>
@@ -102,32 +106,31 @@ describe('Edit a task', () => {
   });
 });
 
-
 describe('Change chekek status', () => {
-  test("Change checked status in the array to true",()=>{
-    let checkclass= new Check()
-    let taskarr=[{ description: 'task', index: 0, completed: false }]
-    checkclass.checked(taskarr,1)
-    expect(taskarr[0].completed===true).toBe(true)
-  })
+  test('Change checked status in the array to true', () => {
+    const checkclass = new Check();
+    const taskarr = [{ description: 'task', index: 0, completed: false }];
+    checkclass.checked(taskarr, 1);
+    expect(taskarr[0].completed === true).toBe(true);
+  });
 
-  test("Change checked status in the array to false",()=>{
-    let checkclass= new Check()
-    let taskarr=[{ description: 'task', index: 0, completed: true }]
-    checkclass.uncheked(taskarr,1)
-    expect(taskarr[0].completed===false).toBe(true)
-  })
+  test('Change checked status in the array to false', () => {
+    const checkclass = new Check();
+    const taskarr = [{ description: 'task', index: 0, completed: true }];
+    checkclass.uncheked(taskarr, 1);
+    expect(taskarr[0].completed === false).toBe(true);
+  });
 });
 
 describe('Delete all completed', () => {
-    test ('Delete all items marked true', () =>{
-        let taskarr = [{ description: 'task', index: 1, completed: true }, { description: 'task', index: 2, completed: false}, 
-                         { description: 'task', index: 3, completed: true }];
-        taskarr = clear(taskarr);
-        expect(taskarr).toHaveLength(1)
-    });
-    test ('Delete all items marked complete from the DOM', () =>{
-      const tasksHtml =`<div class="tasks"><div class="tasks-item" id="1">
+  test('Delete all items marked true', () => {
+    let taskarr = [{ description: 'task', index: 1, completed: true }, { description: 'task', index: 2, completed: false },
+      { description: 'task', index: 3, completed: true }];
+    taskarr = clear(taskarr);
+    expect(taskarr).toHaveLength(1);
+  });
+  test('Delete all items marked complete from the DOM', () => {
+    const tasksHtml = `<div class="tasks"><div class="tasks-item" id="1">
       <div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
       <p>task 1</p>
       <input class="edit_text" type="text" placeholder="Edit Task" value="task 1">
@@ -151,9 +154,10 @@ describe('Delete all completed', () => {
       <img class="removeicon">
       </div>
       </div>`;
-      let taskschekbox = document.querySelectorAll('.checkboxicon');
-      domClear(taskschekbox);
-      taskschekbox = document.querySelectorAll('.checkboxicon');
-      expect(taskschekbox).toHaveLength(1);
-  })
-})
+    document.body.innerHTML = tasksHtml;
+    let taskschekbox = document.querySelectorAll('.checkboxicon');
+    domClear(taskschekbox);
+    taskschekbox = document.querySelectorAll('.checkboxicon');
+    expect(taskschekbox).toHaveLength(1);
+  });
+});
