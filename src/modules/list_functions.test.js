@@ -2,9 +2,7 @@
  * @jest-environment jsdom
  */
 import { add, erase, edit } from './list_functions.js';
-import { domadd, domremove } from './dom_functions.js';
-
-
+import { domadd, domremove, domedit } from './dom_functions.js';
 
 const myhtml = `<div class="to-do-container">
 <div class="title">Today's To Do <img src="#" alt="refresh icon"></div>
@@ -76,8 +74,8 @@ describe('Add and Remove a task from the local storage', () => {
   });
 });
 
-describe('Clear all checked', () =>{
-    test('Edit array description', ()=>{
+describe('Clear all checked', () => {
+  test('Edit array description', () => {
     const taskarr = [{ description: 'task', index: 0, completed: false }, { description: 'task', index: 1, completed: false }];
     document.body.innerHTML = myhtml;
     const taskcontainer = document.querySelector('.tasks');
@@ -86,5 +84,19 @@ describe('Clear all checked', () =>{
     editinput[0].value = 'new';
     edit(editinput[0].value, taskarr, 0);
     expect(taskarr[0].description === 'new').toStrictEqual(true);
-    });
+  });
+
+  test('Edit Dom task description', () => {
+    const taskarr = [{ description: 'task', index: 0, completed: false }, { description: 'task', index: 1, completed: false }];
+    document.body.innerHTML = myhtml;
+    const taskcontainer = document.querySelector('.tasks');
+    domadd(taskarr, taskcontainer, 'url', 'url');
+    let editcontainer = document.querySelectorAll('.tasks-item-start p');
+    const editinput = document.querySelectorAll('.edit_text');
+    editinput[0].value = 'new';
+    edit(editinput[0].value, taskarr, 0);
+    domedit(editcontainer, 0, taskarr);
+    editcontainer = document.querySelectorAll('.tasks-item-start p');
+    expect(editcontainer[0].textContent === taskarr[0].description).toStrictEqual(true);
+  });
 });
