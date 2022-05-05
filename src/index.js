@@ -6,7 +6,7 @@ import * as fun from './modules/list_functions.js';
 import deleteicon from './erase_icon_img.png';
 import Check from './modules/check.js';
 import backgroundimg from './background_img.png';
-import * as dom from "./modules/dom_functions.js";
+import * as dom from './modules/dom_functions.js';
 
 const background = document.querySelector('body');
 const refrescontainer = document.querySelector('.title img');
@@ -19,8 +19,6 @@ const checkclass = new Check();
 
 background.style.backgroundImage = `url('${backgroundimg}')`;
 let taskarr = [];
-
-
 
 const activebuttons = () => {
   const editcontainer = document.querySelectorAll('.tasks-item-start p');
@@ -38,7 +36,7 @@ const activebuttons = () => {
         if (event.key === 'Enter' && editinput[index].value !== '') {
           fun.edit(editinput[index].value, taskarr, index);
           localStorage.setItem('saved', JSON.stringify(taskarr));
-          dom.domedit(editcontainer,index,taskarr)
+          dom.domedit(editcontainer, index, taskarr);
           editinput[index].classList.remove('active');
           editbutton[index].classList.remove('active');
           removeicon[index].classList.remove('active');
@@ -50,7 +48,7 @@ const activebuttons = () => {
     element.addEventListener('click', () => {
       fun.erase(taskarr, removeicon[index].parentElement.id);
       localStorage.setItem('saved', JSON.stringify(taskarr));
-      dom.domremove(removeicon,index,taskarr)
+      dom.domremove(removeicon, index, taskarr);
       const tasks = document.querySelectorAll('.tasks-item');
       tasks.forEach((element, index) => { element.id = taskarr[index].index; });
     });
@@ -102,10 +100,9 @@ inputtext.addEventListener('keypress', (event) => {
   if (event.key === 'Enter' && inputtext.value !== '') {
     fun.add(inputtext.value, taskarr);
     inputtext.value = '';
-    dom.domadd(taskarr,taskcontainer,editincon,deleteicon)
+    dom.domadd(taskarr, taskcontainer, editincon, deleteicon);
     localStorage.setItem('saved', JSON.stringify(taskarr));
     activebuttons();
-
   }
 });
 
@@ -120,9 +117,8 @@ clearcompleted.addEventListener('click', () => {
   localStorage.setItem('saved', JSON.stringify(taskarr));
   const tasks = document.querySelectorAll('.tasks-item');
   tasks.forEach((element, index) => { element.id = taskarr[index].index; });
-  window.location.reload()
+  window.location.reload();
 });
 
 refrescontainer.src = refreshicon;
 entercontainer.src = entericon;
-
