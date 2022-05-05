@@ -1,8 +1,10 @@
 /*
  * @jest-environment jsdom
  */
-import { add, erase } from './list_functions.js';
+import { add, erase, edit } from './list_functions.js';
 import { domadd, domremove } from './dom_functions.js';
+
+
 
 const myhtml = `<div class="to-do-container">
 <div class="title">Today's To Do <img src="#" alt="refresh icon"></div>
@@ -72,4 +74,17 @@ describe('Add and Remove a task from the local storage', () => {
     const current = JSON.parse(localStorage.getItem('saved'));
     expect(old).toHaveLength(current.length + 1);
   });
+});
+
+describe('Clear all checked', () =>{
+    test('Edit array description', ()=>{
+    const taskarr = [{ description: 'task', index: 0, completed: false }, { description: 'task', index: 1, completed: false }];
+    document.body.innerHTML = myhtml;
+    const taskcontainer = document.querySelector('.tasks');
+    domadd(taskarr, taskcontainer, 'url', 'url');
+    const editinput = document.querySelectorAll('.edit_text');
+    editinput[0].value = 'new';
+    edit(editinput[0].value, taskarr, 0);
+    expect(taskarr[0].description === 'new').toStrictEqual(true);
+    });
 });
