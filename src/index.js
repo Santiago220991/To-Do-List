@@ -108,11 +108,7 @@ inputtext.addEventListener('keypress', (event) => {
 
 clearcompleted.addEventListener('click', () => {
   const taskschekbox = document.querySelectorAll('.checkboxicon');
-  taskschekbox.forEach((element) => {
-    if (element.checked === true) {
-      element.parentElement.parentElement.remove();
-    }
-  });
+  dom.domClear(taskschekbox);
   taskarr = fun.clear(taskarr);
   localStorage.setItem('saved', JSON.stringify(taskarr));
   const tasks = document.querySelectorAll('.tasks-item');
