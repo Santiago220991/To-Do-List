@@ -70,6 +70,6 @@ describe('Add and Remove a task from the local storage', () => {
     erase(taskarr, 1);
     localStorage.setItem('saved', JSON.stringify(taskarr));
     const current = JSON.parse(localStorage.getItem('saved'));
-    expect(old).toHaveLength(current.lengt + 1);
+    expect(old).toHaveLength(current.length + 1);
   });
 });
