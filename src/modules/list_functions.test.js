@@ -1,7 +1,7 @@
 /*
  * @jest-environment jsdom
  */
-import { add, erase, edit } from './list_functions.js';
+import { add, erase, edit, clear } from './list_functions.js';
 import { domadd, domremove, domedit } from './dom_functions.js';
 import Check from './check.js'
 
@@ -117,4 +117,13 @@ describe('Change chekek status', () => {
     checkclass.uncheked(taskarr,1)
     expect(taskarr[0].completed===false).toBe(true)
   })
+});
+
+describe('Delete all completed', () => {
+    test ('Delete all items marked true', () =>{
+        let taskarr = [{ description: 'task', index: 1, completed: true }, { description: 'task', index: 2, completed: false}, 
+                         { description: 'task', index: 3, completed: true }];
+        taskarr = clear(taskarr);
+        expect(taskarr).toHaveLength(1)
+    })
 })
