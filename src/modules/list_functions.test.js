@@ -3,6 +3,7 @@
  */
 import { add, erase, edit } from './list_functions.js';
 import { domadd, domremove, domedit } from './dom_functions.js';
+import Check from './check.js'
 
 const myhtml = `<div class="to-do-container">
 <div class="title">Today's To Do <img src="#" alt="refresh icon"></div>
@@ -74,7 +75,7 @@ describe('Add and Remove a task from the local storage', () => {
   });
 });
 
-describe('Clear all checked', () => {
+describe('Edit a task', () => {
   test('Edit array description', () => {
     const taskarr = [{ description: 'task', index: 0, completed: false }, { description: 'task', index: 1, completed: false }];
     document.body.innerHTML = myhtml;
@@ -100,3 +101,20 @@ describe('Clear all checked', () => {
     expect(editcontainer[0].textContent === taskarr[0].description).toStrictEqual(true);
   });
 });
+
+
+describe('Change chekek status', () => {
+  test("Change checked status in the array to true",()=>{
+    let checkclass= new Check()
+    let taskarr=[{ description: 'task', index: 0, completed: false }]
+    checkclass.checked(taskarr,1)
+    expect(taskarr[0].completed===true).toBe(true)
+  })
+
+  test("Change checked status in the array to false",()=>{
+    let checkclass= new Check()
+    let taskarr=[{ description: 'task', index: 0, completed: true }]
+    checkclass.uncheked(taskarr,1)
+    expect(taskarr[0].completed===false).toBe(true)
+  })
+})
