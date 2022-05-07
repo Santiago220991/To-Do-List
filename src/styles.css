@@ -80,6 +80,7 @@ body {
   column-gap: 10px;
   align-items: center;
   justify-content: space-between;
+  cursor: move;
 }
 
 .tasks-item-start {
@@ -145,8 +146,12 @@ body {
   text-align: center;
 }
 
+.drag-over{
+  border: 2px dashed green;
+}
 @media screen and (max-width: 768px) {
   .tasks-item-start p {
     font-size: 2vh;
   }
 }
+

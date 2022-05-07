@@ -1,7 +1,7 @@
 export const domadd = (taskarr, taskcontainer, editincon, deleteicon) => {
-  taskcontainer.innerHTML += `<div class="tasks-item" id="${taskarr[taskarr.length - 1].index}">
+  taskcontainer.innerHTML += `<div class="tasks-item" id="${taskarr[taskarr.length - 1].index}" draggable="true">
     <div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
-    <p>${taskarr[taskarr.length - 1].description}</p>
+    <p ondrop="return false">${taskarr[taskarr.length - 1].description}</p>
     <input class="edit_text" type="text" placeholder="Edit Task" value="${taskarr[taskarr.length - 1].description}">
     </div>
     <img class="edit_icon" src="${editincon}" alt="edit icon">

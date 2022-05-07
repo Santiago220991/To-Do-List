@@ -7,6 +7,7 @@ import deleteicon from './erase_icon_img.png';
 import Check from './modules/check.js';
 import backgroundimg from './background_img.png';
 import * as dom from './modules/dom_functions.js';
+import * as dragf from "./modules/drag_functions.js";
 
 const background = document.querySelector('body');
 const refrescontainer = document.querySelector('.title img');
@@ -64,25 +65,34 @@ const activebuttons = () => {
       }
     });
   });
+  const tasks = document.querySelectorAll('.tasks-item');
+  tasks.forEach(element=>{
+    element.addEventListener("dragstart", dragf.dragStart)
+  })
+
+  taskcontainer.addEventListener('dragenter', dragf.dragEnter)
+  taskcontainer.addEventListener('dragover', dragf.dragOver);
+  taskcontainer.addEventListener('dragleave', dragf.dragLeave);
+  taskcontainer.addEventListener('drop',(event)=>{ dragf.drop(event,taskarr)})
 };
 
 const storagedtasks = () => {
   taskarr.forEach((element) => {
     if (element.completed === false) {
-      taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}">
+      taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}" draggable="true">
 <div class="tasks-item-start"><input type="checkbox" class="checkboxicon">
-<p>${element.description}</p>
+<p draggable="false">${element.description}</p>
 <input class="edit_text" type="text" placeholder="Edit Task" value="${element.description}">
 </div>
-<img class="edit_icon" src="${editincon}" alt="edit icon">
+<img class="edit_icon" src="${editincon}" alt="edit icon" >
 <img class="removeicon" src="${deleteicon}" alt="remove icon">
 </div>`;
     } else {
-      taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}">
+      taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}" draggable="true">
   <div class="tasks-item-start"><input type="checkbox" class="checkboxicon" checked>
-  <p>${element.description}</p>
+  <p draggable="false">${element.description}</p>
   <input class="edit_text" type="text" placeholder="Edit Task" value="${element.description}">
-  </div>
+  </div> 
   <img class="edit_icon" src="${editincon}" alt="edit icon">
   <img class="removeicon" src="${deleteicon}" alt="remove icon">
   </div>`;
