@@ -26,6 +26,7 @@
 
 **Erase completed tasks**
 
+**Draging and droping tasks**
 
 **This project was made with HTML, CSS and Javascript.**
 
