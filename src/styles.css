@@ -146,12 +146,12 @@ body {
   text-align: center;
 }
 
-.drag-over{
+.drag-over {
   border: 2px dashed green;
 }
+
 @media screen and (max-width: 768px) {
   .tasks-item-start p {
     font-size: 2vh;
   }
 }
-

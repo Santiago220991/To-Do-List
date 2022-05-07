@@ -7,7 +7,7 @@ import deleteicon from './erase_icon_img.png';
 import Check from './modules/check.js';
 import backgroundimg from './background_img.png';
 import * as dom from './modules/dom_functions.js';
-import * as dragf from "./modules/drag_functions.js";
+import * as dragf from './modules/drag_functions.js';
 
 const background = document.querySelector('body');
 const refrescontainer = document.querySelector('.title img');
@@ -66,14 +66,14 @@ const activebuttons = () => {
     });
   });
   const tasks = document.querySelectorAll('.tasks-item');
-  tasks.forEach(element=>{
-    element.addEventListener("dragstart", dragf.dragStart)
-  })
+  tasks.forEach((element) => {
+    element.addEventListener('dragstart', dragf.dragStart);
+  });
 
-  taskcontainer.addEventListener('dragenter', dragf.dragEnter)
+  taskcontainer.addEventListener('dragenter', dragf.dragEnter);
   taskcontainer.addEventListener('dragover', dragf.dragOver);
   taskcontainer.addEventListener('dragleave', dragf.dragLeave);
-  taskcontainer.addEventListener('drop',(event)=>{ dragf.drop(event,taskarr)})
+  taskcontainer.addEventListener('drop', (event) => { dragf.drop(event, taskarr); });
 };
 
 const storagedtasks = () => {
