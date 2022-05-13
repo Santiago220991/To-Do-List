@@ -59,11 +59,11 @@ const activebuttons = () => {
       if (element.checked === true) {
         checkclass.checked(taskarr, completed[index].parentElement.parentElement.id);
         localStorage.setItem('saved', JSON.stringify(taskarr));
-        editcontainer[index].classList.add("overline")
+        editcontainer[index].classList.add('overline');
       } else {
         checkclass.uncheked(taskarr, completed[index].parentElement.parentElement.id);
         localStorage.setItem('saved', JSON.stringify(taskarr));
-        editcontainer[index].classList.remove("overline")
+        editcontainer[index].classList.remove('overline');
       }
     });
   });

@@ -97,7 +97,7 @@ body {
   display: none;
 }
 
-.tasks-item-start p.overline{
+.tasks-item-start p.overline {
   text-decoration: line-through;
 }
 
@@ -154,12 +154,12 @@ body {
   background-color: rgba(207, 194, 194, 0.842);
 }
 
-
 @media screen and (max-width: 768px) {
   .tasks-item-start p {
     font-size: 2vh;
   }
+
   .edit_text {
     font-size: 2vh;
-  }  
+  }
 }
