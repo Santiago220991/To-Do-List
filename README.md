@@ -19,15 +19,15 @@
 
 **This is a To Do List web page. It shows a minimalist design with the next features:**
 
-- Add new tasks
+- Add new tasks.
 
-- Edit tasks
+- Edit tasks.
 
-- Markup completed tasks
+- Markup completed tasks.
 
-- Erase completed tasks
+- Erase completed tasks.
 
-- Draging and droping tasks
+- Draging and droping tasks.
 
 This project was made with HTML, CSS and Javascript.
 
