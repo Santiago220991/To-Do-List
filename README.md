@@ -29,7 +29,7 @@
 
 - Draging and droping tasks.
 
-This project was made with HTML, CSS and Javascript.
+This project was made with HTML, CSS and JavaScript.
 
 
 To get a local copy up and running follow these simple example steps.
