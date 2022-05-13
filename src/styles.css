@@ -147,8 +147,9 @@ body {
 }
 
 .drag-over {
-  border: 2px dashed green;
+  background-color: rgba(207, 194, 194, 0.842);
 }
+
 
 @media screen and (max-width: 768px) {
   .tasks-item-start p {

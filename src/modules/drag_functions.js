@@ -4,12 +4,16 @@ export const dragStart = (element) => {
 
 export const dragEnter = (element) => {
   element.preventDefault();
+  if (element.target.className==="tasks-item"){
   element.target.classList.add('drag-over');
+  }
 };
 
 export const dragOver = (element) => {
   element.preventDefault();
+  if (element.target.className==="tasks-item"){
   element.target.classList.add('drag-over');
+  }
 };
 
 export const dragLeave = (element) => {
