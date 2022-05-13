@@ -97,6 +97,10 @@ body {
   display: none;
 }
 
+.tasks-item-start p.overline{
+  text-decoration: line-through;
+}
+
 .edit_text {
   margin-top: 13px;
   margin-bottom: 13px;

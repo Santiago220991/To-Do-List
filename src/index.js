@@ -59,9 +59,11 @@ const activebuttons = () => {
       if (element.checked === true) {
         checkclass.checked(taskarr, completed[index].parentElement.parentElement.id);
         localStorage.setItem('saved', JSON.stringify(taskarr));
+        editcontainer[index].classList.add("overline")
       } else {
         checkclass.uncheked(taskarr, completed[index].parentElement.parentElement.id);
         localStorage.setItem('saved', JSON.stringify(taskarr));
+        editcontainer[index].classList.remove("overline")
       }
     });
   });
@@ -90,7 +92,7 @@ const storagedtasks = () => {
     } else {
       taskcontainer.innerHTML += `<div class="tasks-item" id="${element.index}" draggable="true">
   <div class="tasks-item-start"><input type="checkbox" class="checkboxicon" checked>
-  <p draggable="false">${element.description}</p>
+  <p draggable="false" class="overline">${element.description}</p>
   <input class="edit_text" type="text" placeholder="Edit Task" value="${element.description}">
   </div> 
   <img class="edit_icon" src="${editincon}" alt="edit icon">
