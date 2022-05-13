@@ -17,19 +17,19 @@
 
 ## Getting Started
 
-**This is a To Do List. It shows a minimalist desing with the nex features:**
+**This is a To Do List web page. It shows a minimalist design with the next features:**
 
-**Add new tasks**
+- Add new tasks
 
-**Edit tasks**
+- Edit tasks
 
-**Markup completed tasks**
+- Markup completed tasks
 
-**Erase completed tasks**
+- Erase completed tasks
 
-**Draging and droping tasks**
+- Draging and droping tasks
 
-**This project was made with HTML, CSS and Javascript.**
+This project was made with HTML, CSS and Javascript.
 
 
 To get a local copy up and running follow these simple example steps.
