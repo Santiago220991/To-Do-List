@@ -155,4 +155,7 @@ body {
   .tasks-item-start p {
     font-size: 2vh;
   }
+  .edit_text {
+    font-size: 2vh;
+  }  
 }
