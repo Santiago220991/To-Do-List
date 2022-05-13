@@ -35,7 +35,7 @@
 To get a local copy up and running follow these simple example steps.
 
 
-## Setup
+### Setup
 
 - Clone the repository.
 - In your code editor terminal run `npm install` to install all the dependencies needed.
