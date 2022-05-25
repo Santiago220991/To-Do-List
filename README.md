@@ -1,8 +1,16 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
-> To Do List
+> **This is a To Do List web page. It shows a minimalist design with the next features:**
+
+- Add new tasks.
+- Edit tasks.
+- Markup completed tasks.
+- Erase completed tasks.
+- Draging and droping tasks.
+
+This project was made with HTML, CSS and JavaScript.
 
 
 https://user-images.githubusercontent.com/98363075/168397622-33278cba-7ccc-4bf5-be1b-f0eca277f630.mp4
@@ -20,21 +28,6 @@ https://user-images.githubusercontent.com/98363075/168397622-33278cba-7ccc-4bf5-
 
 ## Getting Started
 
-**This is a To Do List web page. It shows a minimalist design with the next features:**
-
-- Add new tasks.
-
-- Edit tasks.
-
-- Markup completed tasks.
-
-- Erase completed tasks.
-
-- Draging and droping tasks.
-
-This project was made with HTML, CSS and JavaScript.
-
-
 To get a local copy up and running follow these simple example steps.
 
 
@@ -47,7 +40,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author**
+👤 **Santiago**
 
 - GitHub: [@githubhandle](https://github.com/Santiago220991) 
 - Twitter: [@twitterhandle](https://twitter.com/SanCardenas10)
