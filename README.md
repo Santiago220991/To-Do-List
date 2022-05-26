@@ -33,7 +33,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone the repository.
+- Clone the repositoy using the next link: https://github.com/Santiago220991/To-Do-List.git
+- With your code editor open the folder where you cloned the project.
 - In your code editor terminal run `npm install` to install all the dependencies needed.
 - In your code editor terminal run `npm run start` to start the local server.
 
