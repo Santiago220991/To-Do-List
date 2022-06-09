@@ -8,7 +8,7 @@
 - Edit tasks.
 - Markup completed tasks.
 - Erase completed tasks.
-- Draging and droping tasks.
+- Dragging and dropping tasks.
 
 This project was made with HTML, CSS and JavaScript.
 
